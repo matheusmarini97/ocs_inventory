@@ -14,7 +14,7 @@ services:
       - "varlibdata:/var/lib/ocsinventory-reports"
       - "httpdconfdata:/etc/httpd/conf.d"
     environment:
-      OCS_DB_SERVER: ocsinventory-db
+      OCS_DB_SERVER: ocsdb
       OCS_DB_USER: ocsuser
       OCS_DB_PASS: ocspass
       OCS_DB_NAME: ocsweb
@@ -53,4 +53,3 @@ volumes:
   varlibdata:
   httpdconfdata:
   sqldata:
-  
