@@ -5,9 +5,9 @@ services:
     image: ocsinventory/ocsinventory-docker-image:2.9
     container_name : ocsinventory-server
     restart: always
-    ports:
-      - 80:80
-      - 443:443
+#    ports:
+#      - 80:80
+#      - 443:443
     volumes:
       - "perlcomdata:/etc/ocsinventory-server"
       - "ocsreportsdata:/usr/share/ocsinventory-reports/ocsreports/extensions"
@@ -31,8 +31,8 @@ services:
     image : mysql:5.7
     container_name : ocsinventory-db
     restart: always
-    ports :
-      - 3306:3306
+#    ports :
+#      - 3306:3306
     volumes :
       - ./sql/:/docker-entrypoint-initdb.d/
       - sqldata:/var/lib/mysql
